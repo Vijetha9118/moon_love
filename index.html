@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>To The Moon & Back</title>
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      overflow: hidden;
+      font-family: 'Arial', sans-serif;
+      color: white;
+    }
+
+    .space {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      background: radial-gradient(circle at center, #111 0%, #000 70%);
+    }
+
+    .earth, .moon {
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+    }
+
+    .earth {
+      background: url('https://i.imgur.com/3ZQ3Z5O.png') no-repeat center/cover;
+      bottom: 40px;
+      left: calc(50% - 60px);
+    }
+
+    .moon {
+      background: url('https://i.imgur.com/8kQeX8x.png') no-repeat center/cover;
+      top: 40px;
+      right: 40px;
+    }
+
+    .jet {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      background: url('https://i.imgur.com/8mQpZ8p.png') no-repeat center/contain;
+      animation: fly 6s linear infinite;
+    }
+
+    @keyframes fly {
+      0%   { transform: translate(0, 0); left: 50%; top: 80%; }
+      25%  { transform: translate(-200px, -300px); }
+      50%  { transform: translate(200px, -500px); }
+      75%  { transform: translate(-200px, -300px); }
+      100% { transform: translate(0, 0); left: 50%; top: 80%; }
+    }
+
+    .caption {
+      position: absolute;
+      bottom: -50px;
+      width: 100%;
+      text-align: center;
+      font-size: 28px;
+      opacity: 0;
+      animation: rise 4s ease-in-out forwards 1s;
+    }
+
+    @keyframes rise {
+      0% { bottom: -50px; opacity: 0; }
+      100% { bottom: 40px; opacity: 1; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="space">
+    <div class="earth"></div>
+    <div class="moon"></div>
+    <div class="jet"></div>
+
+    <div class="caption">
+      I love you to the moon and back, again and again.
+    </div>
+  </div>
+</body>
+</html>
