@@ -14,7 +14,7 @@
       position: relative;
       width: 100vw;
       height: 100vh;
-      background: url('https://raw.githubusercontent.com/Vijetha9118/moon_love/main/images/space.jpeg') center/cover no-repeat;
+      background: url('https://raw.githubusercontent.com/Vijetha9118/moon_love/main/images/space.jpg') center/cover no-repeat;
     }
 
     .earth, .moon {
@@ -39,7 +39,7 @@
       top: 60px;
       left: 50%;
       transform: translateX(-50%);
-      background-image: url('https://raw.githubusercontent.com/Vijetha9118/moon_love/main/images/moon.png');
+      background-image: url('https://raw.githubusercontent.com/Vijetha9118/moon_love/main/images/mooon.jpg');
     }
 
     .jet {
@@ -54,4 +54,43 @@
       transform: translateX(-50%);
     }
 
-    @
+    @keyframes fly {
+      0%   { top: 78%; }
+      20%  { top: 55%; left: 40%; }
+      40%  { top: 20%; left: 50%; }
+      60%  { top: 55%; left: 60%; }
+      80%  { top: 78%; left: 50%; }
+      100% { top: 78%; left: 50%; }
+    }
+
+    .caption {
+      position: absolute;
+      bottom: -60px;
+      width: 100%;
+      text-align: center;
+      font-size: 26px;
+      font-weight: 500;
+      text-shadow: 0 0 8px black;
+      opacity: 0;
+      animation: rise 3s ease-in-out forwards 1.5s;
+    }
+
+    @keyframes rise {
+      0% { bottom: -60px; opacity: 0; }
+      100% { bottom: 40px; opacity: 1; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="space">
+    <div class="earth"></div>
+    <div class="moon"></div>
+    <div class="jet"></div>
+
+    <div class="caption">
+      I love you to the moon and back, again and again.
+    </div>
+  </div>
+</body>
+</html>
